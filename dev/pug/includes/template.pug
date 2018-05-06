@@ -1,0 +1,19 @@
+//- "block config" created for insert variables from variables.pug
+block config
+	include variables
+
+doctype html
+html(lang= htmlLang)
+	head
+		title #{pageTitle}
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		link(rel="stylesheet" href= flexLayout)
+		link(rel="stylesheet" href= mainCss)
+	body
+		//- Blodk created for to work in index.pug
+		block main
+			include navigation
+		block intro
+
+		script(src= scriptsPath)
