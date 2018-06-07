@@ -3,11 +3,20 @@ block config
 	include variables
 
 doctype html
-html(lang= htmlLang)
+html(lang= htmlLang prefix="og: http://ogp.me/ns#")
 	head
 		title #{pageTitle}
 		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible" content="ie=edge")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		meta(name="description" content= pageDescription)
+		//- Opengraph
+		//- meta(property="og: type" content= ogType)
+		//- meta(property="og: title" content= ogTitle)
+		//- meta(property="og: description" content= ogDescription)
+		//- meta(property="og: url" content= ogUrl)
+		//- meta(property="og: img" content= ogImage)
+		//- Styles
 		link(rel="stylesheet" href= flexLayout)
 		link(rel="stylesheet" href= mainCss)
 	body
