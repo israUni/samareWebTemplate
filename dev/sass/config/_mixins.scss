@@ -1,0 +1,11 @@
+
+@mixin mquery($bp) {
+  @if map-has-key($breakPoints, $bp) {
+    @media screen and (min-width:map-get($breakPoints, $bp)) { @content; }
+  } @else {
+    /* Es recomendable utilizar los breakpoints definidos previamente: xs, sm, md, lg o xl */
+    @media screen and (min-width:$bp) {
+      @content;
+    }
+  }
+}
